@@ -1,0 +1,6 @@
+{
+    "adapter" : "XprApiAdapter",
+    "config" : {
+        "uri" : "/articles/{{XprOption key=options.ArticleId default=7}}"
+    }
+}

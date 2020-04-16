@@ -1,0 +1,17 @@
+{
+    "datasources": [
+        {
+            "__comment" : "Note that there is no 'path' specified for this datasource, in Bundles 2 there is no need to create 'null' adapters when only requiring a script binding",
+            "name" : "script_output",
+            "scripts" : [
+                {
+                    "_comment" : "Notice the preceeding / in the path which resolves to the script in /server_js/simple_echo. If the path was set to 'simple_echo' with no preceeding /, it would look for a 'neighbor file' which would be in /server_js/details/simple_echo",
+                    "path" : "/simple_echo",
+                    "options" : {
+                        "message" : "{{options.message}}"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "datasources": [
+        {
+            "path" : "article_by_id",
+            "options" : { "ArticleId" : "{{options.ArticleId}}" },
+            "name" : "Article"
+        }
+    ]
+}

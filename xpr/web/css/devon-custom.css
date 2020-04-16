@@ -1,0 +1,44 @@
+h1 {
+    font-family:monospace;
+}
+h2 {
+    font-family:monospace;
+    text-decoration:underline;
+}
+h3 {
+    font-family:monospace;
+}
+
+div .sub-element {
+    background-color:#DDD;
+    padding:5px;
+    margin:5px;
+    border-radius:5px;
+}
+
+.devon-small-code {
+    font-size: 0.75em;
+    white-space: pre-wrap;
+}
+
+.demo-code {
+    font-size: 0.5em;
+    max-width:600px;
+    max-height:350px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+code {
+    color:#28F;
+}
+
+.gitlab_link img{
+    width: 100px;
+    height: 41px;
+}
+
+.sagan-quote {
+    color: #DDD;
+    font-style: italic; 
+}

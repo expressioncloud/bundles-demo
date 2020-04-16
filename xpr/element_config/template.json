@@ -1,0 +1,13 @@
+{
+    "datasources": [
+        {
+            "path" : "articles_by_section",
+            "name" : "PageArticles",
+            {{#if options.live}}
+            "options" : {}
+            {{else}}
+            "options" : { "ListingSectionId" : 7 }
+            {{/if}}
+        }
+    ]
+}
