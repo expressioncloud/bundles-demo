@@ -12,5 +12,5 @@ Find us over at [expression.cloud](https://expression.cloud)
 
 ## Where can I see it in action?
 
-You can see a live version of this repository running over at the [Expression Bundles 2.0 Demo Page](https://http://starchycrimsonvampire.xpr.cloud/)
+You can see a live version of this repository running over at the [Expression Bundles 2.0 Demo Page](https://starchycrimsonvampire.xpr.cloud/)
 
