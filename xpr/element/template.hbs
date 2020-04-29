@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="en">
+<script
+  src="https://code.jquery.com/jquery-3.5.0.slim.min.js"
+  integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+  crossorigin="anonymous"></script>
+
 <head>
     <title>Bundles 2.0 Demo Repo</title>
     <link rel="stylesheet" href="{{{WebRoot xpr.bundle}}}/css/pure-min.css">
@@ -245,8 +250,26 @@ exports.process = function(context, options) {
             </p>
             <h2 id="bundle-routes" class="content-subhead">Bundle Routes</h2>
             <p>
-                Bundle Routes are specified in the "routes.json" file at the root of the Bundle.
-                {{{XprElement bundlePath="git_link" options.path="routes.json"}}}
+                Bundle Routes are specified in the "routes.json" file at the root of the Bundle's <code>xpr</code> folder.
+                {{{XprElement bundlePath="git_link" options.path="xpr/routes.json"}}}
+
+                A route binds an endpoint (URL) and it's HTTP request verb to a script. and provides a formatter Element to render the result of the script.
+    
+                This demo shows an ajax GET route, running the same script but supplying different formatters: one for HTML and one for JSON.
+
+
+                <button id='test_html'>Test HTML Ajax</button>
+                <p>
+                    Result:<span id="test_html_result"></span>
+                </p>
+                <button id='test_json'>Test JSON Ajax</button>
+                <p>
+                    Result:<span id="test_json_result"></span>
+                </p>
+                <script>
+                $("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data));});
+                $("#test_json").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){$("#test_json_result").html(data));});
+                </script>
             </p>
 
             
