@@ -1,0 +1,10 @@
+[
+    {
+        "method" : "GET",
+        "route" : "ajax_example",
+        "script" : {
+            "path" : "/ajax/example_script"
+        },
+        "element" : "/ajax/formatter"
+    }
+]
