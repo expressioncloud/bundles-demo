@@ -273,7 +273,7 @@ exports.process = function(context, options) {
                         Result:<span id="test_json_result"></span>
                     </p>
                     <script>
-                    $("#test_html").onClick(function(){ 
+                    $("#test_html").click(function(){ 
                         $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){
                             $("#test_html_result").html(data);
                         });
