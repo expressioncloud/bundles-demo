@@ -1,4 +1,4 @@
-# bundles-2-demo
+# bundles-demo
 
 This is a preliminary demonstration of Bundles 2.0 - a new system for creating Git based code which can run within the Expression environment.
 
