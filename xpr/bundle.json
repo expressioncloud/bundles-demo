@@ -4,8 +4,7 @@
             "name" : "Bundles 2.0 Feature Demonstration",
             "element" : "template",
             "options" : { 
-                "live" : true,
-                "github_root" : "https://github.com/expressioncloud/bundles-demo"
+                "live" : true
             }
         } 
     ],
