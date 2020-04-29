@@ -1,7 +1,7 @@
 [
     {
         "method" : "GET",
-        "route" : "ajax_example",
+        "route" : "/ajax_example",
         "script" : {
             "path" : "/ajax/example_script",
             "options" : {}
