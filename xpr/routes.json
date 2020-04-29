@@ -3,7 +3,7 @@
         "method" : "GET",
         "route" : "/ajax_example",
         "script" : {
-            "path" : "/ajax/example_script",
+            "path" : "/ajax/script",
             "options" : {}
         },
         "element" : "/ajax/formatter"
