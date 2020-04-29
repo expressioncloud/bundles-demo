@@ -256,6 +256,11 @@ exports.process = function(context, options) {
                 A route binds an endpoint (URL) and it's HTTP request verb to a script. and provides a formatter Element to render the result of the script.
     
                 This demo shows an ajax GET route, running the same script but supplying different formatters: one for HTML and one for JSON.
+                <ul>
+                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/server_js/ajax/script.js"}}}</li>
+                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/element/ajax/html_formatter.json"}}}</li>
+                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/element/ajax/json_formatter.json"}}}</li>
+                </ul>
 
 
                 <div>
@@ -268,7 +273,12 @@ exports.process = function(context, options) {
                         Result:<span id="test_json_result"></span>
                     </p>
                     <script>
-                    //$("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data));});
+                    $("#test_html").onClick(function(){ 
+                        $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){
+                            $("#test_html_result").html(data);
+                        });
+                    });
+
                     //$("#test_json").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){$("#test_json_result").html(data));});
                     //$("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data));});
                     </script>
