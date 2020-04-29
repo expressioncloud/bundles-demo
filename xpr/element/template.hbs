@@ -258,18 +258,21 @@ exports.process = function(context, options) {
                 This demo shows an ajax GET route, running the same script but supplying different formatters: one for HTML and one for JSON.
 
 
-                <button id='test_html'>Test HTML Ajax</button>
-                <p>
-                    Result:<span id="test_html_result"></span>
-                </p>
-                <button id='test_json'>Test JSON Ajax</button>
-                <p>
-                    Result:<span id="test_json_result"></span>
-                </p>
-                <script>
-                $("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data);})});
-                $("#test_json").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){$("#test_json_result").html(data);})});
-                </script>
+                <div>
+                    <button id='test_html'>Test HTML Ajax</button>
+                    <p>
+                        Result:<span id="test_html_result"></span>
+                    </p>
+                    <button id='test_json'>Test JSON Ajax</button>
+                    <p>
+                        Result:<span id="test_json_result"></span>
+                    </p>
+                    <script>
+                    //$("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data));});
+                    //$("#test_json").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){$("#test_json_result").html(data));});
+                    //$("#test_html").onClick(function(){ $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){$("#test_html_result").html(data));});
+                    </script>
+                </div>
             </p>
 
             
