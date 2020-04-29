@@ -274,8 +274,13 @@ exports.process = function(context, options) {
                     </p>
                     <script>
                     $("#test_html").click(function(){ 
-                        $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){
+                        $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_html", function(data){
                             $("#test_html_result").html(data);
+                        });
+                    });
+                    $("#test_json").click(function(){ 
+                        $.get("/__xpr__/pub_engine/bundles-demo/routes/ajax_example_json", function(data){
+                            $("#test_json_result").html("<pre>"+data+"</pre>");
                         });
                     });
 
