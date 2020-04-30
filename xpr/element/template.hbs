@@ -200,11 +200,13 @@
 
             <h2 id="element-options" class="content-subhead">Element Options</h2>
             <p>
-                "Sub" Elements can also have their own Datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. Note that we are "wasting" effort here by refetching from the API, this is just meant as an example of using <code>options</code> to control Element behaviour.
+                "Sub" Elements can also have their own Datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. </p>
+
+            <p><em>Note that we are "wasting" some effort here by refetching from the API, this is just an illustration</em></p>
             </p>
 
             <p>
-                These are the files in use that demonstrate how this works:
+                These are the files in use for this demonstration, and an overview of the flow:
                 <ul>
                     <li>
                         This Element configuration file receives the <code>options</code> and passes <code>ArticleId</code> to the downstream Datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/details/article_details_fetching.json"}}}
@@ -219,18 +221,20 @@
             </p>
 
 
-            <p>
-            {{=<% %>=}}
-            <code>
-            {{#each PageArticles}}
+            <div class="devon-example">
+                <p>
+                {{=<% %>=}}
+                <code>
+                {{#each PageArticles}}
+                    {{{XprElement bundlePath="details/article_details_fetching" options.ArticleId=this.Id}}}
+                {{/each}}
+                </code>
+                <%={{ }}=%>
+                </p>
+                {{#each PageArticles}}
                 {{{XprElement bundlePath="details/article_details_fetching" options.ArticleId=this.Id}}}
-            {{/each}}
-            </code>
-            <%={{ }}=%>
-            </p>
-            {{#each PageArticles}}
-            {{{XprElement bundlePath="details/article_details_fetching" options.ArticleId=this.Id}}}
-            {{/each}}
+                {{/each}}
+            </div>
 
             <!---------------------------------------->
             <!---------------------------------------->
