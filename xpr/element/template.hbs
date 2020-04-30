@@ -175,21 +175,24 @@
 
             <h2 id="context-passing" class="content-subhead">Context Passing</h2>
             <p>
-                Elements can have data from the <code>root</code> (alsoo known as <code>parent</code>) context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
+                Elements can have data from the <code>root</code> (also known as <code>parent</code>) context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
             </p>
             <p>
-            {{=<% %>=}}
-            <code>
-            {{#each PageArticles}}
-                {{{XprElement bundlePath="details/article_details" context.Article=this}}}
-            {{/each}}
-            </code>
-            <%={{ }}=%>
-            </p>
 
-            {{#each PageArticles}}
-            {{{XprElement bundlePath="details/article_details" context.Article=this}}}
-            {{/each}}
+            <div class='devon-example'>
+            {{=<% %>=}}
+                <code>
+                {{#each PageArticles}}
+                    {{{XprElement bundlePath="details/article_details" context.Article=this}}}
+                {{/each}}
+                </code>
+                <%={{ }}=%>
+                </p>
+                <div><strong>Output:</strong></div>
+                {{#each PageArticles}}
+                {{{XprElement bundlePath="details/article_details" context.Article=this}}}
+                {{/each}}
+            </div>
 
 
             <!---------------------------------------->
