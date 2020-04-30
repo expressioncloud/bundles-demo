@@ -21,6 +21,11 @@ div .sub-element {
     white-space: pre-wrap;
 }
 
+.devon-example {
+    border-radius:5px;
+    background-color:#DDF;
+}
+
 .demo-code {
     font-size: 0.5em;
     max-width:600px;
