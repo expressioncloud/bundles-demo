@@ -9,10 +9,11 @@ h3 {
     font-family:monospace;
 }
 
-.sub-element::before {
+div .sub-element::before {
     font-weight:bold;
     content:"Sub Element:";
 }
+
 div .sub-element {
     background-color:#DDD;
     padding:5px;
