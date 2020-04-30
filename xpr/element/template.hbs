@@ -56,16 +56,16 @@
             <h2 id="entry-point" class="content-subhead">Entry Point</h2>
 
             <p>
-            This page, like all pages in Expression, is rendered with an <code>Element</code>. An Element is a template written in HBS, combined with a configuration that expresses which datasources to bind to to feed any dynamic elements required to render the page.
+            This page, like all pages in Expression, is rendered with an <code>Element</code>. An Element is a template written in HBS, combined with a configuration that expresses which datasources to bind to to feed any dynamic Elements required to render the page.
             </p>
             <p>
-                The element rendering this page <code>(template.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element/template.hbs"}}}
+                The Element rendering this page <code>(template.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/Element/template.hbs"}}}
             </p>
             <p>
-                Each element can optionally have a configuration file. The configuration for this element can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/template.json"}}}
+                Each Element can optionally have a configuration file. The configuration for this Element can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/Element_config/template.json"}}}
             </p>
             <p>
-                We happen to be using elements to render those links: {{{XprElement bundlePath="git_link" options.path="xpr/element/git_link.hbs"}}}. The cost "per element" without any additional API fetches on the general Expression is relatively small. 
+                We happen to be using Elements to render those links: {{{XprElement bundlePath="git_link" options.path="xpr/Element/git_link.hbs"}}}. The cost "per Element" without any additional API fetches on the general Expression is relatively small. 
             </p>
         
             <!---------------------------------------->
@@ -100,10 +100,10 @@
 
             <h2 id="about-element" class="content-subhead">About Element</h2>
             {{=<% %>=}}
-            <p> Demonstrates using <code>{{{XprElement}}}</code> to pull in an element</p>
+            <p> Demonstrates using <code>{{{XprElement}}}</code> to pull in an Element</p>
             <%={{ }}=%>
             <p>
-                The code for this element <code>(about.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element/details/about.hbs"}}}
+                The code for this Element <code>(about.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/Element/details/about.hbs"}}}
             </p>
             {{{XprElement bundlePath="about"}}}
 
@@ -112,13 +112,13 @@
 
             <h2 id="attached-data" class="content-subhead">Attached Data</h2>
             <p>
-                The element rendering this page <code>(template.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element/template.hbs"}}}
+                The Element rendering this page <code>(template.hbs)</code> can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/Element/template.hbs"}}}
             </p>
             <p>
-                The configuration for this element can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/template.json"}}}
+                The configuration for this Element can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/Element_config/template.json"}}}
             </p>
 
-            <p>An element's configuration includes the datasources attached, and any options to configure those datasources. In the case of this <code>template</code> element, we have a datasource attached which uses the <code>datasource/articles_by_section.json</code> datasource to populate the variable <code>PageArticles</code> for this element.
+            <p>An Element's configuration includes the datasources attached, and any options to configure those datasources. In the case of this <code>template</code> Element, we have a datasource attached which uses the <code>datasource/articles_by_section.json</code> datasource to populate the variable <code>PageArticles</code> for this Element.
 
             <h3>Example of Dynamic Article Data</h3>
             {{=<% %>=}}
@@ -139,7 +139,7 @@
 
             <h2 id="context-passing" class="content-subhead">Context Passing</h2>
             <p>
-                Elements can have data from the <code>root</code> or <code>parent</code> context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
+                Elements can have data from the <code>root</code> or <code>parent</code> context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/Element/details/article_details.hbs"}}}
             </p>
             <p>
             {{=<% %>=}}
@@ -161,20 +161,20 @@
 
             <h2 id="element-options" class="content-subhead">Element Options</h2>
             <p>
-                "Sub" Elements can also have their own datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an element which controls and fetches its own data. Here we demonstrate an element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. Note that we are "wasting" effort here by refetching from the API, this is just meant as an example of using <code>options</code> to control element behaviour.
+                "Sub" Elements can also have their own datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. Note that we are "wasting" effort here by refetching from the API, this is just meant as an example of using <code>options</code> to control Element behaviour.
             </p>
 
             <p>
                 These are the files in use that demonstrate how this works:
                 <ul>
                     <li>
-                        This element configuration file receives the <code>options</code> and passes <code>ArticleId</code> to the downstream datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/details/article_details_fetching.json"}}}
+                        This Element configuration file receives the <code>options</code> and passes <code>ArticleId</code> to the downstream datasource: {{{XprElement bundlePath="git_link" options.path="xpr/Element_config/details/article_details_fetching.json"}}}
                     </li>
                     <li>
                         This datasource receives <code>options.ArticleId</code> and uses it to parameterize an API call: {{{XprElement bundlePath="git_link" options.path="xpr/datasource/details/article_by_id.json"}}}
                     </li>
                     <li>
-                        Finally, this template renders the result of the datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details_fetching.hbs"}}}
+                        Finally, this template renders the result of the datasource: {{{XprElement bundlePath="git_link" options.path="xpr/Element/details/article_details_fetching.hbs"}}}
                     </li>
                 </ul>
             </p>
@@ -198,7 +198,7 @@
 
             <h2 id="ssjs-binding" class="content-subhead">SSJS - Element Binding</h2>
             <p>
-                Bundles 2.0 SSJS Bindings are a lot more flexible than they used to be. For starters, we're going to render an element which has a datasource binding which has no datasource <code>path</code> and instead, uses the script block to do all data fetching exclusively in SSJS. 
+                Bundles 2.0 SSJS Bindings are a lot more flexible than they used to be. For starters, we're going to render an Element which has a datasource binding which has no datasource <code>path</code> and instead, uses the script block to do all data fetching exclusively in SSJS. 
             </p>
             {{=<% %>=}}
             <h4>Element Inclusion</h4>
@@ -207,7 +207,7 @@
             </code>
             <%={{ }}=%>
             <h4>Element Configuration</h4>
-            {{{XprElement bundlePath="git_link" options.path="xpr/element_config/details/ssjs.json"}}}
+            {{{XprElement bundlePath="git_link" options.path="xpr/Element_config/details/ssjs.json"}}}
             {{=<% %>=}}
             <code class="devon-small-code">
 {
@@ -232,7 +232,7 @@
             <h4>Script</h4>
             {{{XprElement bundlePath="git_link" options.path="xpr/server_js/simple_echo.js"}}}
             <code class="devon-small-code">
-//this is a "simple echo" JS script to demonstrate binding scripts to elements and datasources.
+//this is a "simple echo" JS script to demonstrate binding scripts to Elements and datasources.
 
 exports.process = function(context, options) {
     return options["message"];
@@ -258,8 +258,8 @@ exports.process = function(context, options) {
                 This demo shows an ajax GET route, running the same script but supplying different formatters: one for HTML and one for JSON.
                 <ul>
                     <li>{{{XprElement bundlePath="git_link" options.path="xpr/server_js/ajax/script.js"}}}</li>
-                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/element/ajax/html_formatter.hbs"}}}</li>
-                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/element/ajax/json_formatter.hbs"}}}</li>
+                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/Element/ajax/html_formatter.hbs"}}}</li>
+                    <li>{{{XprElement bundlePath="git_link" options.path="xpr/Element/ajax/json_formatter.hbs"}}}</li>
                 </ul>
 
 
