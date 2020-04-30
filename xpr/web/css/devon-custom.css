@@ -22,7 +22,7 @@ div .sub-element {
 }
 
 .devon-example::before {
-    content:"Example:"
+    content:"<strong>Example:</strong>"
 }
 .devon-example {
     border-radius:5px;
