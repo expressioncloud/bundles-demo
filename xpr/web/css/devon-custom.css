@@ -66,3 +66,7 @@ code {
     color: #BBB;
     font-style: italic; 
 }
+
+h2 .content-subhead {
+    color: #000;
+}
