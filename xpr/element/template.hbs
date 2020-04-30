@@ -23,7 +23,7 @@
             <a class="pure-menu-heading" href="#">Bundles 2.0</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#entry-point" class="pure-menu-link">Entry Point</a></li>
-                <li class="pure-menu-item"><a href="#inline-media" class="pure-menu-link">Inline Media</a></li>
+                <li class="pure-menu-item"><a href="#inline-media" class="pure-menu-link">Bundle Web Directory</a></li>
                 <li class="pure-menu-item"><a href="#xpr-context" class="pure-menu-link">XPR Context</a></li>
                 <li class="pure-menu-item"><a href="#about-element" class="pure-menu-link">About Element</a></li>
                 <li class="pure-menu-item"><a href="#attached-data" class="pure-menu-link">Attached Data</a></li>
@@ -68,13 +68,20 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="inline-media" class="content-subhead">Inline Media</h2>
+            <h2 id="inline-media" class="content-subhead">Bundle Web Directory</h2>
             <img src="{{{WebRoot xpr.bundle}}}/img/cool_room.jpeg"></img>
-            <p>Bundles can now include media. This is great for custom widgets or assets which should be developer managed, rather than client managed. Any static media lives in the bundle's web directory: {{{XprElement bundlePath="git_link" options.path="xpr/web/"}}}</p>
+            <p>Bundles can now include static media. This is great for custom images or assets which should be developer managed, rather than client managed. Static media lives in the bundle's web directory: {{{XprElement bundlePath="git_link" options.path="xpr/web/"}}}</p>
             <p>
+
+            <h3>Using for CSS and JS</h3>
             {{=<% %>=}}
             This is how we include the CSS and JS for this bundle: <code>href="{{{WebRoot xpr.bundle}}}/css/devon-custom.css"</code>
             <%={{ }}=%>
+            </p>
+
+            <h3>New Opportunities!</h3>
+            <p>
+            Developer may be interested in using this feature to use CSS/JS builders like SASS/LESS or WebPack to compile custom css, and place the end result in the <code>/xpr/web/</code> directory.
             </p>
 
             <h2 id="xpr-context" class="content-subhead">XPR Context</h2>
