@@ -87,9 +87,9 @@
             <%={{ }}=%>
             </p>
 
-            <h3>New Opportunities!</h3>
+            <h3>Opening up your Options!</h3>
             <p>
-            Developer may be interested in using this feature to use CSS/JS builders like SASS/LESS or WebPack to compile custom css, and place the end result in the <code>/xpr/web/</code> directory.
+            Developers may be interested in using this feature to use CSS/JS compilers or js package managers to compile custom css, and place the end result in the <code>/xpr/web/</code> directory.
             </p>
 
             <h2 id="xpr-context" class="content-subhead">Request Context</h2>
@@ -130,7 +130,7 @@
                 The configuration for this Element can be viewed in GitHub here: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/template.json"}}}
             </p>
 
-            <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. In the case of this <code>template</code> Element, we have a datasource attached which uses the <code>datasource/articles_by_section.json</code> datasource to populate the variable <code>PageArticles</code> for this Element.
+            <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. In the case of this <code>template</code> Element, we have a Datasource attached which uses the <code>datasource/articles_by_section.json</code> Datasource to populate the variable <code>PageArticles</code> for this Element.
 
             <h3>Example of Dynamic Article Data</h3>
             {{=<% %>=}}
@@ -180,13 +180,13 @@
                 These are the files in use that demonstrate how this works:
                 <ul>
                     <li>
-                        This Element configuration file receives the <code>options</code> and passes <code>ArticleId</code> to the downstream datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/details/article_details_fetching.json"}}}
+                        This Element configuration file receives the <code>options</code> and passes <code>ArticleId</code> to the downstream Datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/details/article_details_fetching.json"}}}
                     </li>
                     <li>
-                        This datasource receives <code>options.ArticleId</code> and uses it to parameterize an API call: {{{XprElement bundlePath="git_link" options.path="xpr/datasource/details/article_by_id.json"}}}
+                        This Datasource receives <code>options.ArticleId</code> and uses it to parameterize an API call: {{{XprElement bundlePath="git_link" options.path="xpr/datasource/details/article_by_id.json"}}}
                     </li>
                     <li>
-                        Finally, this template renders the result of the datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details_fetching.hbs"}}}
+                        Finally, this template renders the result of the Datasource: {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details_fetching.hbs"}}}
                     </li>
                 </ul>
             </p>
@@ -210,7 +210,7 @@
 
             <h2 id="ssjs-binding" class="content-subhead">SSJS - Element Binding</h2>
             <p>
-                Bundles 2.0 SSJS Bindings are a lot more flexible than they used to be. For starters, we're going to render an Element which has a datasource binding which has no datasource <code>path</code> and instead, uses the script block to do all data fetching exclusively in SSJS. 
+                Bundles 2.0 SSJS Bindings are a lot more flexible than they used to be. For starters, we're going to render an Element which has a Datasource binding which has no Datasource <code>path</code> and instead, uses the script block to do all data fetching exclusively in SSJS. 
             </p>
             {{=<% %>=}}
             <h4>Element Inclusion</h4>
@@ -225,7 +225,7 @@
 {
     "datasources": [
         {
-            "__comment" : "Note that there is no 'path' specified for this datasource, in Bundles 2 there is no need to create 'null' adapters when only requiring a script binding",
+            "__comment" : "Note that there is no 'path' specified for this Datasource, in Bundles 2 there is no need to create 'null' adapters when only requiring a script binding",
             "name" : "script_output",
             "scripts" : [
                 {
