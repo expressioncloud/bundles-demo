@@ -256,19 +256,19 @@
                 {{=<% %>=}}
                 <code class="devon-small-code">
 {
-    "datasou    rces": [
+    "datasources": [
         {
-                "__comment" : "Note that there is no 'path' specified for this Datasource, in Bundles 2 there is no need to create 'null' adapters when only requiring a script binding",
-                "name" : "script_output",
-                "scripts" : [
-                    {
-                        "_comment" : "Notice the preceeding / in the path which resolves to the script in /server_js/simple_echo. If the path was set to 'simple_echo' with no preceeding /, it would look for a 'neighbor file' which would be in /server_js/details/simple_echo",
-                        "path" : "/simple_echo",
-                        "options" : {
-                            "message" : "{{options.message}}"
-                        }
+            "__comment" : "Note that there is no 'path' specified for this Datasource, in Bundles 2 there is no need to create 'null' adapters when only requiring a script binding",
+            "name" : "script_output",
+            "scripts" : [
+                {
+                    "_comment" : "Notice the preceeding / in the path which resolves to the script in /server_js/simple_echo. If the path was set to 'simple_echo' with no preceeding /, it would look for a 'neighbor file' which would be in /server_js/details/simple_echo",
+                    "path" : "/simple_echo",
+                    "options" : {
+                        "message" : "{{options.message}}"
                     }
-                ]
+                }
+            ]
         }
     ]
 }
@@ -277,10 +277,10 @@
                 <h4>Script</h4>
                 {{{XprElement bundlePath="git_link" options.path="xpr/server_js/simple_echo.js"}}}
                 <code class="devon-small-code">
-//this is a     "simple echo" JS script to demonstrate binding scripts to Elements and Datasources.
+//this is a "simple echo" JS script to demonstrate binding scripts to Elements and Datasources.
 
-exports.proc    ess = function(context, options) {
-    return o    ptions["message"];
+exports.process = function(context, options) {
+    return options["message"];
 }
                 </code>
                 <h4>Result</h4>
@@ -299,7 +299,10 @@ exports.proc    ess = function(context, options) {
 
                 A route binds an endpoint (URL) and it's HTTP request verb to a script. and provides a formatter Element to render the result of the script.
     
+            </p>
+            <p>
                 This demo shows an ajax GET route, running the same script but supplying different formatters: one for HTML and one for JSON.
+            </p>
                 <ul>
                     <li>{{{XprElement bundlePath="git_link" options.path="xpr/routes.json"}}}</li>
                     <li>{{{XprElement bundlePath="git_link" options.path="xpr/server_js/ajax/script.js"}}}</li>
