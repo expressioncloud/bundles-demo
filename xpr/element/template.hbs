@@ -128,7 +128,6 @@
             {{=<% %>=}}
             <code>{{{XprElement bundlePath="about"}}}</code>
             <%={{ }}=%>
-
             <div><strong>Output:</strong></div>
             {{{XprElement bundlePath="about"}}}
             </div>
@@ -146,26 +145,28 @@
 
             <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. In the case of this <code>template</code> Element, we have a Datasource attached which uses the <code>datasource/articles_by_section.json</code> Datasource to populate the variable <code>PageArticles</code> for this Element.
 
-            <h3>Example of Dynamic Article Data</h3>
-            {{=<% %>=}}
-            <code>
-            {{#each PageArticles}}
-                &ltli&gt {{Title}} &lt/li&gt
-            {{/each}}
-            </code>
-            <%={{ }}=%>
-            <ul>
-            {{#each PageArticles}}
-            <li>{{Title}}</li>
-            {{/each}}
-            </ul>
+
+            <div class="devon-example">
+                {{=<% %>=}}
+                <code>
+                {{#each PageArticles}}
+                    &ltli&gt {{Title}} &lt/li&gt
+                {{/each}}
+                </code>
+                <%={{ }}=%>
+                <ul>
+                {{#each PageArticles}}
+                <li>{{Title}}</li>
+                {{/each}}
+                </ul>
+            </div>
 
             <!---------------------------------------->
             <!---------------------------------------->
 
             <h2 id="context-passing" class="content-subhead">Context Passing</h2>
             <p>
-                Elements can have data from the <code>root</code> or <code>parent</code> context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
+                Elements can have data from the <code>root</code> (alsoo known as <code>parent</code>) context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
             </p>
             <p>
             {{=<% %>=}}
