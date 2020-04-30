@@ -51,6 +51,12 @@ code {
     color:#28F;
 }
 
+
+.devon-caption {
+    width:50%;
+    font-size:50%;
+}
+
 .gitlab_link img{
     width: 100px;
     height: 41px;
