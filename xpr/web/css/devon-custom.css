@@ -30,11 +30,13 @@ div .sub-element {
     font-weight:bold;
     content:"Example:";
 }
+
 .devon-example {
     border-radius:5px;
     background-color:#DDF;
     margin:8px;
     padding:8px;
+    color:#2080F0;
 }
 
 .demo-code {
