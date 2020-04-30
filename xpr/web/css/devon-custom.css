@@ -21,6 +21,9 @@ div .sub-element {
     white-space: pre-wrap;
 }
 
+.devon-example::before {
+    content:"Example:"
+}
 .devon-example {
     border-radius:5px;
     background-color:#DDF;
