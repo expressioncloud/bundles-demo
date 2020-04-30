@@ -50,7 +50,7 @@
         </div>
 
         <div class="content">
-            <h2 id="bonjour" class="content-subhead">Bonjour!</h2>
+            <h2 id="bonjour" class="content-subhead devon-strong">Bonjour!</h2>
             <p>
             Welcome to the Bundles 2.0 Live Demo. The main audience for this demo is existing developers working within Expression looking for a "crash course" on the new stuff Bundles 2.0 provides - and analogues to existing techniq    ues that will be familiar to anyone who has done development with Expression.
             </p>
@@ -58,7 +58,7 @@
             If you're not familiar with Expression - find us over at <a href="https://expression.cloud">expression.cloud</a>. Expression is a fully customizable SaaS CMS, Digital Commerce, and Development Platform that empowers developers and marketers to build amazing digital experiences together. Bundles are just one part of that experience so if you've stumbled upon us, take a look - If you've been looking for an alternative to Wordpress, Drupal, Magento, and all the usual suspects, you've found what you're looking for.
             </p>
             
-            <h2 id="entry-point" class="content-subhead">Entry Point</h2>
+            <h2 id="entry-point" class="content-subhead devon-strong">Entry Point</h2>
 
             <p>
             This page, like all pages in Expression, is rendered with an <code>Element</code>.  An Element is an HTML template for marking up data pulled from Datasources, used to render blocks of content. Elements are based on the Handlebars templating language. Elements can reference other Elements, allowing for modular markup construction
@@ -85,7 +85,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="inline-media" class="content-subhead">Bundle Web Directory</h2>
+            <h2 id="inline-media" class="content-subhead devon-strong">Bundle Web Directory</h2>
             <img src="{{{WebRoot xpr.bundle}}}/img/cool_room.jpeg"></img>
             <p>Bundles can now include static media. This is great for custom images or assets which should be developer managed, rather than client managed. Static media lives in the bundle's web directory: {{{XprElement bundlePath="git_link" options.path="xpr/web/"}}}</p>
             <p>
@@ -99,7 +99,7 @@
             Developers may be interested in using this feature to use CSS/JS compilers or js package managers to compile custom css, and place the end result in the <code>/xpr/web/</code> directory.
             </p>
 
-            <h2 id="xpr-context" class="content-subhead">Request Context</h2>
+            <h2 id="xpr-context" class="content-subhead devon-strong">Request Context</h2>
 
                 <p> Let's see how you can dump context variables using the <code>XprJson</code>. We will dump the <code>xpr</code> variable</p>. This is the same <code>xpr</code> variable you may be used to from working with <a href="https://www.expression.cloud/docs-and-help/documentation/#render-context">Elements</a> in traditional Bundles.
                 <p>
@@ -121,7 +121,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="about-element" class="content-subhead">About Element</h2>
+            <h2 id="about-element" class="content-subhead devon-strong">About Element</h2>
             {{=<% %>=}}
             <p> Demonstrates using <code>{{{XprElement}}}</code> to pull in an Element</p>
             <%={{ }}=%>
@@ -140,7 +140,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="attached-data" class="content-subhead">Attached Data</h2>
+            <h2 id="attached-data" class="content-subhead devon-strong">Attached Data</h2>
             <img src="{{{WebRoot xpr.bundle}}}/img/content-management.jpeg"></img>
             <div class="devon-caption">
             <p><em>For these examples, we will be pulling data from bundles-demo.xpr.cloud's Content Management API's</em></p>
@@ -173,7 +173,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="context-passing" class="content-subhead">Context Passing</h2>
+            <h2 id="context-passing" class="content-subhead devon-strong">Context Passing</h2>
             <p>
                 Elements can have data from the <code>root</code> (also known as <code>parent</code>) context passed into them to be rendered. Here we are going to loop over the same data as in the Attached Data context, but instead of rendering each article inline, pass the article to a sub Element for rendering. {{{XprElement bundlePath="git_link" options.path="xpr/element/details/article_details.hbs"}}}
             </p>
@@ -198,7 +198,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="element-options" class="content-subhead">Element Options</h2>
+            <h2 id="element-options" class="content-subhead devon-strong">Element Options</h2>
             <p>
                 "Sub" Elements can also have their own Datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. </p>
 
@@ -239,7 +239,7 @@
             <!---------------------------------------->
             <!---------------------------------------->
 
-            <h2 id="ssjs-binding" class="content-subhead">SSJS - Bind Directly To Element</h2>
+            <h2 id="ssjs-binding" class="content-subhead devon-strong">SSJS - Bind Directly To Element</h2>
             <p>
 
             </p>
@@ -288,11 +288,11 @@ exports.proc    ess = function(context, options) {
             </div>
 
 
-            <h2 id="ssjs-binding-ds" class="content-subhead">SSJS - Datasources & Modules</h2>
+            <h2 id="ssjs-binding-ds" class="content-subhead devon-strong">SSJS - Datasources & Modules</h2>
             <p>
             <em>Coming Soon...</em>
             </p>
-            <h2 id="bundle-routes" class="content-subhead">Bundle Routes</h2>
+            <h2 id="bundle-routes" class="content-subhead devon-strong">Bundle Routes</h2>
             <p>
                 Bundle Routes are specified in the "routes.json" file at the root of the Bundle's <code>xpr</code> folder.
                 {{{XprElement bundlePath="git_link" options.path="xpr/routes.json"}}}
