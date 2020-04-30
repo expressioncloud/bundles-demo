@@ -143,20 +143,20 @@
             <h2 id="attached-data" class="content-subhead">Attached Data</h2>
             <img src="{{{WebRoot xpr.bundle}}}/img/content-management.jpeg"></img>
             <div class="devon-caption">
-            <p><em>Examples here which fetch data pull their data from from Expression's Content Management API's</em></p>
+            <p><em>For these examples, we will be pulling data from bundles-demo.xpr.cloud's Content Management API's</em></p>
             </div>
-            <p>
+            <li>
                 The Element rendering this page <code>(template.hbs)</code> can be viewed in GitHub here: {{{XprElement bundlePath="git_link" options.path="xpr/element/template.hbs"}}}
-            </p>
-            <p>
+            </li>
+            <li>
                 The configuration for this Element can be viewed in GitHub here: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/template.json"}}}
-            </p>
+            </li>
 
-            <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. In the case of this <code>template</code> Element, we have a Datasource attached which uses the <code>datasource/articles_by_section.json</code> Datasource to populate the variable <code>PageArticles</code> for this Element.
+                {{=<% %>=}}
+            <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. This <code>template</code> Element has a Datasource attached which uses the <code>datasource/articles_by_section.json</code> Datasource Definitionto populate the variable <code>{{PageArticles}}</code> for this Element.
 
 
             <div class="devon-example">
-                {{=<% %>=}}
                 <code>
                 {{#each PageArticles}}
                     &ltli&gt {{Title}} &lt/li&gt
