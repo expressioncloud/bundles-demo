@@ -22,11 +22,14 @@ div .sub-element {
 }
 
 .devon-example::before {
-    content:"<strong>Example:</strong>"
+    color:#0000000;
+    content:"Example:"
 }
 .devon-example {
     border-radius:5px;
     background-color:#DDF;
+    margin:8px;
+    padding:8px;
 }
 
 .demo-code {
