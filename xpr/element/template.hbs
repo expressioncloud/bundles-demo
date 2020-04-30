@@ -122,7 +122,7 @@
                 The configuration for this Element can be viewed in github here: {{{XprElement bundlePath="git_link" options.path="xpr/element_config/template.json"}}}
             </p>
 
-            <p>An Element's configuration includes the datasources attached, and any options to configure those datasources. In the case of this <code>template</code> Element, we have a datasource attached which uses the <code>datasource/articles_by_section.json</code> datasource to populate the variable <code>PageArticles</code> for this Element.
+            <p>An Element's configuration includes the Datasources attached, and any options to configure those Datasources. In the case of this <code>template</code> Element, we have a datasource attached which uses the <code>datasource/articles_by_section.json</code> datasource to populate the variable <code>PageArticles</code> for this Element.
 
             <h3>Example of Dynamic Article Data</h3>
             {{=<% %>=}}
@@ -165,7 +165,7 @@
 
             <h2 id="element-options" class="content-subhead">Element Options</h2>
             <p>
-                "Sub" Elements can also have their own datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. Note that we are "wasting" effort here by refetching from the API, this is just meant as an example of using <code>options</code> to control Element behaviour.
+                "Sub" Elements can also have their own Datasources attached. While it is usually better to "fetch up front and pass down", sometimes you want an Element which controls and fetches its own data. Here we demonstrate an Element which will fetch an article based on Id, and we will use the <code>PageArticles</code> variable from the previous example to supply the list of Ids. Note that we are "wasting" effort here by refetching from the API, this is just meant as an example of using <code>options</code> to control Element behaviour.
             </p>
 
             <p>
@@ -236,7 +236,7 @@
             <h4>Script</h4>
             {{{XprElement bundlePath="git_link" options.path="xpr/server_js/simple_echo.js"}}}
             <code class="devon-small-code">
-//this is a "simple echo" JS script to demonstrate binding scripts to Elements and datasources.
+//this is a "simple echo" JS script to demonstrate binding scripts to Elements and Datasources.
 
 exports.process = function(context, options) {
     return options["message"];
